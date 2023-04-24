@@ -1,0 +1,82 @@
+._fc-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+._fc-upload .el-upload-button-container{
+    line-height: 1;
+    margin-bottom: 10px;
+}
+._fc-upload .upload__tip{
+    font-size: 12px;
+    color: #606266;
+    line-height: inherit;
+    margin-bottom: 6px;
+    padding-left: 6px;
+}
+._fc-upload .fc-upload-btn{
+    margin-bottom: 6px;
+}
+._fc-upload .fc-files{
+    display: flex !important;
+    align-items: center;
+  
+    padding: 0 6px;
+    line-height: 30px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+._fc-upload .fc-files:hover{
+    background: #f7f7f7;
+}
+._fc-upload .file-prefix-icon{
+    margin-right: 8px;
+}
+._fc-upload .fc-files img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+._fc-upload .fc-upload-btn {
+    cursor: pointer;
+}
+
+._fc-upload .fc-upload-cover {
+    color: #000;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+._fc-upload .fc-upload-cover i {
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+._fc-upload .fc-files .file-item a{
+   color: #409EFF;
+   text-decoration: underline; 
+   cursor: pointer;
+}
+
+._fc-upload .fc-files:hover .fc-upload-cover {
+    opacity: 1;
+}
+
+._fc-upload .el-upload {
+    display: block;
+}
+
+._fc-upload .fc-upload-btn, ._fc-upload .fc-files {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin-right: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
