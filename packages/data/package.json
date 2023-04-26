@@ -1,6 +1,6 @@
 {
     "name": "@jeff-js/data",
-    "version": "2.5.29",
+    "version": "2.5.31",
     "description": "",
     "main": "./src/index.js",
     "module": "./src/index.js",
