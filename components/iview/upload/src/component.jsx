@@ -162,7 +162,7 @@ export default function createUpload(config) {
             }
             return (
                 <div
-                    class="_fc-upload">{[this.formCreateInject.prop.props.showUploadList ? [] : this.makeFiles(), this.makeUpload()]}
+                    class="_fc-upload-file">{[this.formCreateInject.prop.props.showUploadList ? [] : this.makeFiles(), this.makeUpload()]}
                     <Modal v-model={this.previewVisible}
                         props={{title: this.modalTitle, footerHide: true}}>
                         <img alt="example" style="width: 100%" src={this.previewImage}/>

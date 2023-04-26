@@ -180,7 +180,7 @@ export default {
         }
         return (
             <div
-                class='_fc-upload'>{[this.makeUpload(), this.formCreateInject.prop.props.showFileList ? [] : this.makeFiles()]}
+                class='_fc-upload-file'>{[this.makeUpload(), this.formCreateInject.prop.props.showFileList ? [] : this.makeFiles()]}
                 <el-dialog
                     props={{
                         appendToBody: true,

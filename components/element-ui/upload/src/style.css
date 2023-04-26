@@ -1,23 +1,23 @@
-._fc-upload {
+._fc-upload-file {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-._fc-upload .el-upload-button-container{
+._fc-upload-file .el-upload-button-container{
     line-height: 1;
     margin-bottom: 10px;
 }
-._fc-upload .upload__tip{
+._fc-upload-file .upload__tip{
     font-size: 12px;
     color: #606266;
     line-height: inherit;
     margin-bottom: 6px;
     padding-left: 6px;
 }
-._fc-upload .fc-upload-btn{
+._fc-upload-file .fc-upload-btn{
     margin-bottom: 6px;
 }
-._fc-upload .fc-files{
+._fc-upload-file .fc-files{
     display: flex !important;
     align-items: center;
   
@@ -26,52 +26,52 @@
     margin-bottom: 4px;
     border-radius: 4px;
 }
-._fc-upload .fc-files:hover{
+._fc-upload-file .fc-files:hover{
     background: #f7f7f7;
 }
-._fc-upload .file-prefix-icon{
+._fc-upload-file .file-prefix-icon{
     margin-right: 8px;
 }
-._fc-upload .fc-files img {
+._fc-upload-file .fc-files img {
     width: 100%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
 }
 
-._fc-upload .fc-upload-btn {
+._fc-upload-file .fc-upload-btn {
     cursor: pointer;
 }
 
-._fc-upload .fc-upload-cover {
+._fc-upload-file .fc-upload-cover {
     color: #000;
     -webkit-transition: opacity .3s;
     -o-transition: opacity .3s;
     transition: opacity .3s;
 }
 
-._fc-upload .fc-upload-cover i {
+._fc-upload-file .fc-upload-cover i {
     color: #000;
     font-size: 16px;
     cursor: pointer;
     margin-left: 30px;
 }
 
-._fc-upload .fc-files .file-item a{
+._fc-upload-file .fc-files .file-item a{
    color: #409EFF;
    text-decoration: underline; 
    cursor: pointer;
 }
 
-._fc-upload .fc-files:hover .fc-upload-cover {
+._fc-upload-file .fc-files:hover .fc-upload-cover {
     opacity: 1;
 }
 
-._fc-upload .el-upload {
+._fc-upload-file .el-upload {
     display: block;
 }
 
-._fc-upload .fc-upload-btn, ._fc-upload .fc-files {
+._fc-upload-file .fc-upload-btn, ._fc-upload-file .fc-files {
     display: inline-block;
     text-align: center;
     overflow: hidden;
