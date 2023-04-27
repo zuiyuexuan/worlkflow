@@ -19,11 +19,14 @@
 ._fc-upload-file .fc-files{
     display: flex !important;
     align-items: center;
-  
     padding: 0 6px;
     line-height: 30px;
     margin-bottom: 4px;
     border-radius: 4px;
+    width: auto;
+    border: none;
+    box-shadow: none;
+    height: 30px;
 }
 ._fc-upload-file .fc-files:hover{
     background: #f4f9fd;
