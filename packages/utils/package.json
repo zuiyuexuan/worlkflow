@@ -1,6 +1,6 @@
 {
     "name": "@jeff-js/utils",
-    "version": "2.5.38",
+    "version": "2.5.39",
     "description": "",
     "main": "./lib/index.js",
     "scripts": {
