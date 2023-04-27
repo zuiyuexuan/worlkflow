@@ -4,10 +4,7 @@
     "scripts": {
         "build": "node tools/cli/run.js build",
         "dev:ele": "cd packages/element-ui && npm run dev:ele",
-        "dev:iview": "cd packages/iview && npm run dev:iview",
-        "dev:iview4": "cd packages/iview4 && npm run dev:iview4",
         "dev:view-design": "cd packages/view-design && npm run dev:view-design",
-        "dev:antdv": "cd packages/ant-design-vue && npm run dev:antdv",
         "commit": "git cz",
         "lint": "eslint *.js",
         "clear-all": "rimraf package-lock.json node_modules packages/*/node_modules components/*/*/node_modules packages/*/package-lock.json components/*/*/package-lock.json",
