@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-elm-frame",
-  "version": "2.5.34",
+  "version": "2.5.35",
   "description": "@jeff-js/element-ui 内置组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
