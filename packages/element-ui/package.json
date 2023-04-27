@@ -50,15 +50,15 @@
         "@jeff-js/component-elm-select": "^2.5.36",
         "@jeff-js/component-elm-tree": "^2.5.36",
         "@jeff-js/component-elm-upload": "^2.5.36",
-        "@jeff-js/component-subform": "^2.5.31",
-        "@jeff-js/core": "^2.5.31",
-        "@jeff-js/utils": "^2.5.31"
+        "@jeff-js/component-subform": "^2.5.36",
+        "@jeff-js/core": "^2.5.36",
+        "@jeff-js/utils": "^2.5.36"
     },
     "publishConfig": {
         "access": "public"
     },
     "devDependencies": {
-        "@jeff-js/component-wangeditor": "^2.5.31",
+        "@jeff-js/component-wangeditor": "^2.5.36",
         "@vue/cli-plugin-babel": "~4.5.0",
         "@vue/cli-service": "^4.5.3",
         "element-ui": "^2.15.9",

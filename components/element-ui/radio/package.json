@@ -37,6 +37,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@jeff-js/utils": "^2.5.31"
+    "@jeff-js/utils": "^2.5.36"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-wangeditor",
-  "version": "2.5.31",
+  "version": "2.5.36",
   "description": "@jeff-js 富文本组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

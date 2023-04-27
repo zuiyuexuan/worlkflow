@@ -30,7 +30,7 @@
   "author": "xaboy",
   "license": "MIT",
   "dependencies": {
-    "@jeff-js/utils": "^2.5.31"
+    "@jeff-js/utils": "^2.5.36"
   },
   "bugs": {
     "url": "https://github.com/xaboy/form-create/issues"
