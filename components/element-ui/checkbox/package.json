@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-elm-checkbox",
-  "version": "2.5.36",
+  "version": "2.5.37",
   "description": "@jeff-js/element-ui 内置组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -37,6 +37,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@jeff-js/utils": "^2.5.36"
+    "@jeff-js/utils": "^2.5.37"
   }
 }
