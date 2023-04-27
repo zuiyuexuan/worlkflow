@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-elm-upload",
-  "version": "2.5.32",
+  "version": "2.5.33",
   "description": "@jeff-js/element-ui 内置组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
