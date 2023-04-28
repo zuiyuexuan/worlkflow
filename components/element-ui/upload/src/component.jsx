@@ -3,6 +3,7 @@ import getSlot from '@jeff-js/utils/lib/slot';
 import './style.css';
 
 function parseFile(file, i) {
+    console.log('parseFile',file);
     return {
         url: file,
         name: getFileName(file),
@@ -104,6 +105,7 @@ export default {
             if( this.uploadType === 'image'){
                 return <img src={file.url} key={this.key('img' + index)}/>
             }else{
+                console.log('file-console',file);
                 return <div class='file-item'><a href={file.url} target='_blank'>{file.fileName}</a></div>       
             }
           
