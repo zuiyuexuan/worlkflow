@@ -3,7 +3,7 @@ import getSlot from '@jeff-js/utils/lib/slot';
 import './style.css';
 
 function parseFile(file, i) {
-    console.log('parseFile',file);
+    console.log('parseFile2',file);
     return {
         url: file,
         name: getFileName(file),
