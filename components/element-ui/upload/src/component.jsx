@@ -13,7 +13,7 @@ function parseFile(file, i) {
 function getFileName(file) {
     return ('' + file).split('/').pop()
 }
-
+// 增加允许删除属性
 const NAME = 'fcUpload';
 
 export default {
