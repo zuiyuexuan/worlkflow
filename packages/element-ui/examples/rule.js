@@ -416,7 +416,13 @@ export default function mock() {
 
 
         //upload 上传组件
-        maker.upload('附件', 'pic', ['https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'])
+        maker.upload('附件', 'pic', [
+            {
+              "fileName": "C36D9C7A-7332-4ac5-8D01-A50C26F5AB48.png",
+              "uuid": "eec2de55-9a24-4788-bf44-25504a758ad1",
+              "downloadUrl": null
+            }
+          ])
             .props({
                 'action': '/api/file/upload',
                 'limit': 2,
@@ -430,7 +436,7 @@ export default function mock() {
                 'onSuccess': function (res, file) {
                     console.log('upload success',res, file);
                     file.url = '/api/file/download/'+ res.uuid;
-                    file.name = res.fileName;
+                    // file.name = res.fileName;
                 },
                 'onRemove': function (file, fileList) {
                     console.log(file, fileList);

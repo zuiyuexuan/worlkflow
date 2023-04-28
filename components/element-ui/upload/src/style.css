@@ -16,6 +16,14 @@
 ._fc-upload-file .fc-upload-btn{
     margin-bottom: 6px;
 }
+._fc-upload-file .fc-upload-btn i{
+    margin-right: 3px;
+}
+._fc-upload-file .fc-upload-btn .el-button{
+    background: #EBF3FE;
+    color: #3F8Eff;
+    border: 0;
+}
 ._fc-upload-file .fc-files{
     display: flex !important;
     align-items: center;

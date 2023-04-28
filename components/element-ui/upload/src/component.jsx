@@ -1,11 +1,11 @@
-import toArray from '@jeff-js/utils/lib/toarray';
 import getSlot from '@jeff-js/utils/lib/slot';
 import './style.css';
 
 function parseFile(file, i) {
+    console.log(file);
     return {
-        url: file,
-        name: getFileName(file),
+        url: '/api/file/download/'+ file.uuid,
+        name: file.fileName,
         uid: i
     };
 }
@@ -67,17 +67,9 @@ export default {
         if (this.formCreateInject.prop.props.showFileList === undefined) {
             this.formCreateInject.prop.props.showFileList = false;
         }
-        this.formCreateInject.prop.props.fileList = toArray(this.value).map(parseFile);
+        this.formCreateInject.prop.props.fileList = this.value.map(parseFile);
     },
     watch: {
-        value(n) {
-            // if (this.$refs.upload.uploadFiles.every(file => {
-            //     return !file.status || file.status === 'success';
-            // })) {
-            //     this.$refs.upload.uploadFiles = toArray(n).map(parseFile);
-            //     this.uploadList = this.$refs.upload.uploadFiles;
-            // }
-        },
         limit(n, o) {
             if (o === 1 || n === 1) {
                 this.update();
@@ -151,7 +143,7 @@ export default {
                     key={this.key('upload')}>
                     {allowUpload ? <template slot="default">
                         {this.$slots.default || <div class='fc-upload-btn'>
-                            <el-button type="primary" size="small"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+                            <el-button type="primary" size="small"><i class="el-icon-upload el-icon--right"></i> 上传</el-button>
                         </div>}
                     </template> : null}{getSlot(this.$slots, ['default'])}
                 </ElUpload>
@@ -161,7 +153,7 @@ export default {
         
         },
         update() {
-        
+            console.log('update',this.$refs.upload.uploadFiles)
             let files = this.$refs.upload.uploadFiles.map((file) => file.url).filter((url) => url !== undefined);
             if (this.cacheFiles.length !== files.length) {
                 this.cacheFiles = [...files];
