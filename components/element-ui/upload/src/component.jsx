@@ -1,8 +1,9 @@
 import getSlot from '@jeff-js/utils/lib/slot';
+
 import './style.css';
 
 function parseFile(file, i) {
-    console.log(file);
+    if(file.name) return file;
     return {
         url: '/api/file/download/'+ file.uuid,
         name: file.fileName,
@@ -10,9 +11,6 @@ function parseFile(file, i) {
     };
 }
 
-function getFileName(file) {
-    return ('' + file).split('/').pop()
-}
 // 增加允许删除属性
 const NAME = 'fcUpload';
 
@@ -67,9 +65,18 @@ export default {
         if (this.formCreateInject.prop.props.showFileList === undefined) {
             this.formCreateInject.prop.props.showFileList = false;
         }
-        this.formCreateInject.prop.props.fileList = this.value.map(parseFile);
+        // this.formCreateInject.prop.props.fileList = toArray(this.value).map(parseFile);
     },
     watch: {
+        value(n) {
+            if (this.$refs.upload.uploadFiles.every(file => {
+                return !file.status || file.status === 'success';
+            })) {
+                console.log('watch：value',n)
+                this.$refs.upload.uploadFiles = n.map(parseFile);
+                this.uploadList = this.$refs.upload.uploadFiles;
+            }
+        },
         limit(n, o) {
             if (o === 1 || n === 1) {
                 this.update();
@@ -137,13 +144,13 @@ export default {
         makeUpload() {
             const isShow = (!this.limit || this.limit > this.uploadList.length);
             const allowUpload = isShow && this.allowUpload;
-            return <div class="el-upload-button-container">
+            return <div class={allowUpload ? 'el-upload-button-container' : 'el-upload-button-container is_hidden'}>
                 <ElUpload {...this.formCreateInject.prop} ref="upload"
                     style={{display: 'inline-block'}}
                     key={this.key('upload')}>
                     {allowUpload ? <template slot="default">
                         {this.$slots.default || <div class='fc-upload-btn'>
-                            <el-button type="primary" size="small"><i class="el-icon-upload el-icon--right"></i> 上传</el-button>
+                            <el-button type="primary" size="small"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
                         </div>}
                     </template> : null}{getSlot(this.$slots, ['default'])}
                 </ElUpload>
@@ -154,7 +161,7 @@ export default {
         },
         update() {
             console.log('update',this.$refs.upload.uploadFiles)
-            let files = this.$refs.upload.uploadFiles.map((file) => file.url).filter((url) => url !== undefined);
+            let files = this.$refs.upload.uploadFiles.filter((url) => url !== undefined);
             if (this.cacheFiles.length !== files.length) {
                 this.cacheFiles = [...files];
                 this.$emit('input', this.limit === 1 ? (files[0] || '') : files);
