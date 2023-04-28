@@ -14,6 +14,22 @@ module.exports = {
             filename: 'index.html'
         }
     },
+    devServer: {
+        port: 3677,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
+        proxy: {
+            '/api': {
+                target: 'https://sit-swork.faw.cn/',
+                secure: false,
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': '/api',
+                },
+            },
+        },
+    },
     configureWebpack: {
         resolve: {
             alias: {

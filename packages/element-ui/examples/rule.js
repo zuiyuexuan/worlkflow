@@ -418,14 +418,19 @@ export default function mock() {
         //upload 上传组件
         maker.upload('附件', 'pic', ['https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'])
             .props({
-                'action': 'https://jsonplaceholder.typicode.com/posts/',
+                'action': '/api/file/upload',
                 'limit': 2,
                 'uploadType': 'file',
                 'name': 'file',
+                'data':{
+                    key:'PC_1682650159657',
+                    group:'file'
+                },
                 'tip':'只能上传jpg/png文件，且不超过5000kb',
                 'onSuccess': function (res, file) {
                     console.log('upload success',res, file);
-                    file.url = res.thumbUrl;
+                    file.url = '/api/file/download/'+ res.uuid;
+                    file.name = res.fileName;
                 },
                 'onRemove': function (file, fileList) {
                     console.log(file, fileList);

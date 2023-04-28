@@ -3,7 +3,6 @@ import getSlot from '@jeff-js/utils/lib/slot';
 import './style.css';
 
 function parseFile(file, i) {
-    console.log('parseFile2',file);
     return {
         url: file,
         name: getFileName(file),
@@ -72,13 +71,12 @@ export default {
     },
     watch: {
         value(n) {
-            if (this.$refs.upload.uploadFiles.every(file => {
-                return !file.status || file.status === 'success';
-            })) {
-                console.log(' toArray(n)',n, toArray(n));
-                this.$refs.upload.uploadFiles = toArray(n).map(parseFile);
-                this.uploadList = this.$refs.upload.uploadFiles;
-            }
+            // if (this.$refs.upload.uploadFiles.every(file => {
+            //     return !file.status || file.status === 'success';
+            // })) {
+            //     this.$refs.upload.uploadFiles = toArray(n).map(parseFile);
+            //     this.uploadList = this.$refs.upload.uploadFiles;
+            // }
         },
         limit(n, o) {
             if (o === 1 || n === 1) {
@@ -106,8 +104,7 @@ export default {
             if( this.uploadType === 'image'){
                 return <img src={file.url} key={this.key('img' + index)}/>
             }else{
-                console.log('file-console',file);
-                return <div class='file-item'><a href={file.url} target='_blank'>{file.fileName}</a></div>       
+                return <div class='file-item'><a href={file.url} target='_blank'>{file.name}</a></div>       
             }
           
         },
@@ -164,6 +161,7 @@ export default {
         
         },
         update() {
+        
             let files = this.$refs.upload.uploadFiles.map((file) => file.url).filter((url) => url !== undefined);
             if (this.cacheFiles.length !== files.length) {
                 this.cacheFiles = [...files];
