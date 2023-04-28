@@ -41,7 +41,6 @@
     "bugs": {
         "url": "https://github.com/xaboy/form-create/issues"
     },
-    "homepage": "http://www.form-create.com",
     "dependencies": {
         "@jeff-js/component-elm-checkbox": "^2.5.39",
         "@jeff-js/component-elm-frame": "^2.5.39",
