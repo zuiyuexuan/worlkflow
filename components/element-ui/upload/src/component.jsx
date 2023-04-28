@@ -75,6 +75,7 @@ export default {
             if (this.$refs.upload.uploadFiles.every(file => {
                 return !file.status || file.status === 'success';
             })) {
+                console.log(' toArray(n)',n, toArray(n));
                 this.$refs.upload.uploadFiles = toArray(n).map(parseFile);
                 this.uploadList = this.$refs.upload.uploadFiles;
             }
