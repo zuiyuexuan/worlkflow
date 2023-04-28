@@ -1,6 +1,6 @@
 {
     "name": "@jeff-js/element-ui",
-    "version": "2.5.46",
+    "version": "2.5.47",
     "description": "element-ui动态表单|form-create is a form generation component that can generate dynamic rendering, data collection, verification and submission functions through JSON. Supports 3 UI frameworks, and supports the generation of any Vue components. Built-in 20 kinds of commonly used form components and custom components, no matter how complex forms can be easily handled.",
     "main": "./dist/form-create.min.js",
     "module": "./dist/form-create.min.js",
@@ -49,7 +49,7 @@
         "@jeff-js/component-elm-radio": "^2.5.39",
         "@jeff-js/component-elm-select": "^2.5.39",
         "@jeff-js/component-elm-tree": "^2.5.39",
-        "@jeff-js/component-elm-upload": "^2.5.46",
+        "@jeff-js/component-elm-upload": "^2.5.47",
         "@jeff-js/component-subform": "^2.5.39",
         "@jeff-js/core": "^2.5.39",
         "@jeff-js/utils": "^2.5.39"
