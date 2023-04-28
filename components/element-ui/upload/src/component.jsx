@@ -104,7 +104,7 @@ export default {
             if( this.uploadType === 'image'){
                 return <img src={file.url} key={this.key('img' + index)}/>
             }else{
-                return <div class='file-item'><a href={file.url} target='_blank'>{file.name}</a></div>       
+                return <div class='file-item'><a href={file.url} target='_blank'>{file.fileName}</a></div>       
             }
           
         },
