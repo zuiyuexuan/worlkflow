@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-elm-select",
-  "version": "2.5.51",
+  "version": "2.5.52",
   "description": "@jeff-js/element-ui 内置组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
