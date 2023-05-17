@@ -6,7 +6,7 @@
     "module": "./dist/index.min.js",
     "typings": "./types/index.d.ts",
     "scripts": {
-        "clean": "rimraf dist/",
+        "clean": "rimraf -G dist/",
         "bili": "cross-env UI_LIB=core bili",
         "build": "npm-run-all clean bili"
     },

@@ -3,7 +3,6 @@
     "packages/core",
     "packages/data",
     "packages/element-ui",
-    "packages/view-design",
     "packages/utils",
     "components/common/subform",
     "components/common/wangeditor",

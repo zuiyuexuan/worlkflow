@@ -20,10 +20,9 @@
 ## [中文 README](https://github.com/xaboy/form-create/blob/2.5/README_zh-CN.md)
 
 ## Support
-- **iview**
-- **view-design**
+
 - **element-ui**
-- **ant-design-vue**
+
 
 >  If it helps, you can click on "Star" in the upper right corner. Thank you!
 >  The project is still being developed and improved. If there are any 'recommendations or questions, please ask [here](https://github.com/xaboy/form-create/issues/new)
@@ -99,20 +98,12 @@
 npm install @jeff-js/iview
 ```
 
-view-design
-```shell
-npm install @jeff-js/iview4
-```
 
 element-ui
 ```shell
 npm install @jeff-js/element-ui
 ```
 
-ant-design-vue
-```shell
-npm install @jeff-js/ant-design-vue
-```
 
 ## Import
 

@@ -8,7 +8,7 @@
     "jsdelivr": "./dist/form-create.js",
     "typings": "./types/index.d.ts",
     "scripts": {
-        "clean": "rimraf dist/",
+        "clean": "rimraf -G dist/",
         "dev:ele": "vue-cli-service serve",
         "bili": "cross-env UI_LIB=element-ui bili",
         "build": "npm-run-all clean bili"

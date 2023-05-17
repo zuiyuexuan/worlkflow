@@ -20,10 +20,8 @@
 | [Vue3版本](https://github.com/xaboy/form-create/tree/next)
 
 ## 支持
-- **iview**
-- **view-design**
+
 - **element-ui**
-- **ant-design-vue**
 
 > 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！本项目还在不断开发完善中,如有任何建议或问题[请在这里提出](https://github.com/xaboy/form-create/issues/new)
 
@@ -65,8 +63,7 @@
 
 | 包名             | 说明                                                |
 | ------------------ | ---------------------------------------------------------- |
-| @jeff-js/iview [![version](https://img.shields.io/npm/v/@jeff-js/iview.svg)](https://www.npmjs.com/package/@jeff-js/iview) [![npm](https://img.shields.io/npm/dt/@jeff-js/iview.svg)](https://www.npmjs.com/package/@jeff-js/iview)    | [iview 版本](http://form-create.com/v2/iview/) |
-| @jeff-js/iview4 [![version](https://img.shields.io/npm/v/@jeff-js/iview4.svg)](https://www.npmjs.com/package/@jeff-js/iview4) [![npm](https://img.shields.io/npm/dt/@jeff-js/iview4.svg)](https://www.npmjs.com/package/@jeff-js/iview4)    | [view-design 版本](http://form-create.com/v2/iview/) |
+
 | @jeff-js/element-ui [![version](https://img.shields.io/npm/v/@jeff-js/element-ui.svg)](https://www.npmjs.com/package/@jeff-js/element-ui) [![npm](https://img.shields.io/npm/dt/@jeff-js/element-ui.svg)](https://www.npmjs.com/package/@jeff-js/element-ui) | [element-ui 版本](http://form-create.com/v2/element-ui/)        |
 | @jeff-js/ant-design-vue [![version](https://img.shields.io/npm/v/@jeff-js/ant-design-vue.svg)](https://www.npmjs.com/package/@jeff-js/ant-design-vue) [![npm](https://img.shields.io/npm/dt/@jeff-js/ant-design-vue.svg)](https://www.npmjs.com/package/@jeff-js/ant-design-vue) | [ant-design-vue 版本](http://form-create.com/v2/ant-design-vue/)     |
 | @jeff-js/designer [![version](https://img.shields.io/npm/v/@jeff-js/designer.svg)](https://www.npmjs.com/package/@jeff-js/designer) [![npm](https://img.shields.io/npm/dt/@jeff-js/designer.svg)](https://www.npmjs.com/package/@jeff-js/designer) | [表单设计器](http://form-create.com/designer)     |
@@ -99,21 +96,11 @@ iview
 npm install @jeff-js/iview
 ```
 
-view-design
-```shell
-npm install @jeff-js/iview4
-```
 
 element-ui
 ```shell
 npm install @jeff-js/element-ui
 ```
-
-ant-design-vue
-```shell
-npm install @jeff-js/ant-design-vue
-```
-
 ## 引入
 
 **CDN:**
@@ -226,22 +213,12 @@ $ cd form-create
 $ npm install -g rimraf
 $ npm run bootstrap
 ```
-查看 iview 示例
-```sh 
-$ npm run dev:iview
-```
-查看 view-design 示例
-```sh 
-$ npm run dev:iview4
-```
+
 查看 element-ui 示例
 ```sh 
 $ npm run dev:ele
 ```
-查看 ant-design-vue 示例
-```sh 
-$ npm run dev:antd
-```
+
 
 ## 感谢
 

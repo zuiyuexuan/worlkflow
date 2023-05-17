@@ -7,7 +7,7 @@
   "unpkg": "./dist/index.js",
   "jsdelivr": "./dist/index.js",
   "scripts": {
-    "clean": "rimraf dist/",
+    "clean": "rimraf -G dist/",
     "bili": "cross-env bili",
     "build": "npm-run-all clean bili"
   },

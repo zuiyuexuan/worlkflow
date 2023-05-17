@@ -7,7 +7,7 @@
     "unpkg": "./dist/province_city.js",
     "jsdelivr": "./dist/province_city.js",
     "scripts": {
-        "clean": "rimraf dist/",
+        "clean": "rimraf -G dist/",
         "bili:province_city": "cross-env LIB=province_city bili",
         "bili:province_city_code": "cross-env LIB=province_city_code bili",
         "bili:province_city_area": "cross-env LIB=province_city_area bili",
