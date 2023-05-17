@@ -12,6 +12,10 @@ export default {
     },
     render(h, ctx) {
         const options = ctx.props.formCreateInject.options;
+        const {value}  = ctx.data;
+        if(!Array.isArray(value)){
+            ctx.data.value= [value]; 
+        }
         return <ElSelect {...ctx.data}>{(Array.isArray(options) ? options : []).map((props, index) => {
             const slot = props.slot;
             return <ElOption props={props}

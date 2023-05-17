@@ -14,13 +14,17 @@ export default function useInput(Handler) {
         },
         setValue(ctx, value, formValue, setFlag) {
             if (ctx.deleted) return;
-            ctx.cacheValue = value;
+            let newValue = value  // select单选值为数组
+            if(ctx.type==='select' && !Array.isArray(value)){
+                newValue = [value]
+            } 
+            ctx.cacheValue = newValue;
             this.changeStatus = true;
             this.nextRefresh();
             this.$render.clearCache(ctx);
             this.setFormData(ctx, formValue);
             this.syncValue();
-            this.valueChange(ctx, value);
+            this.valueChange(ctx, newValue);
             this.vm.$emit('change', ctx.field, value, ctx.origin, this.api, setFlag || false);
             this.effect(ctx, 'value');
         },
