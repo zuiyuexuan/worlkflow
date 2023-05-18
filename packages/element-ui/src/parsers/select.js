@@ -12,7 +12,10 @@ export default {
             }
             return value;
         }else{
-            return value[0];   
+            if(value){
+                return value[0];
+            }
+            return []
         }
     
     }

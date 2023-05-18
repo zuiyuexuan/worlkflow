@@ -307,7 +307,7 @@ export default function mock() {
 
 
         //select 下拉选择组件
-        maker.select('产品分类', 'cate_id', ['105']).options([
+        maker.select('产品分类', 'cate_id', '').options([
             {'value': '104', 'label': '生态蔬菜', 'disabled': false, 'slot': '<div style:\'color:#ff7271;\'>自定义显示内容</div>'},
             {'value': '106', 'label': '植物植物', 'disabled': false},
             {
@@ -317,7 +317,7 @@ export default function mock() {
                     }, ['新鲜水果']);
                 }
             },
-        ]).props({multiple: false}),
+        ]).props({}),
         {
             type: 'div',
             name: 'div2',
