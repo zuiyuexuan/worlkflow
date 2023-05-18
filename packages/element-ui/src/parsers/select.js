@@ -5,15 +5,16 @@ const name = 'select';
 export default {
     name,
     toFormValue(value, ctx) {
-       
-        if (ctx.prop.props.multiple && !Array.isArray(value)) {
-            return toArray(value)
-        } else {
-            if(Array.isArray(value)){
-                return value[0]; 
+
+        if(ctx.prop.props.multiple){
+            if(!Array.isArray(value)){
+                return toArray(value)
             }
             return value;
+        }else{
+            return value[0];   
         }
+    
     }
 
 }
