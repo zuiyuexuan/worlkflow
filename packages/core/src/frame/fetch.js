@@ -21,6 +21,38 @@ function getBody(xhr) {
     }
 }
 
+/**
+ * @description 获取父窗口的本地存储
+ * @param {string} key 本地存储的 key 值
+ * @returns {object} 本地存储的 value 值
+ */
+function getParentLocal(key) {
+    try {
+        const val = localStorage.getItem(key) || window.parent.localStorage.getItem(key) || '{}';
+        return JSON.parse(val);
+    } catch (err) {
+        console.error('iframe is cross-origin, please set document domain!');
+    }
+    return {};
+}
+
+export const getToken = () => getParentLocal('jwt').value ?? '';
+export const getUserInfo = () => getParentLocal('userinfo');
+
+
+// 自定义扩展 header 请求头
+function getConfigHeaders() {
+    const {tenantId} = getUserInfo();
+    return {
+        authorization: `Bearer ${getToken()}`, // token
+        QFCTid: tenantId || '', // 租户 ID
+        QFCSid: 'CS-0101', // 系统 ID
+        lang: localStorage.getItem('lang') || 'zh-cn', // 多语言
+        userAgent: 'pc', // 设备
+        gray: '0', // 灰度
+    };
+}
+
 export default function fetch(option) {
     if (typeof XMLHttpRequest === 'undefined') {
         return;
@@ -60,8 +92,11 @@ export default function fetch(option) {
     if (option.withCredentials && 'withCredentials' in xhr) {
         xhr.withCredentials = true;
     }
-
-    const headers = option.headers || {};
+    const optionHeaders = option.headers || {};
+    const headers = {
+        ...optionHeaders,
+        ...getConfigHeaders(),
+    };
 
     Object.keys(headers).forEach(item => {
         if (headers[item] !== null) {
