@@ -42,14 +42,14 @@
         "url": "https://github.com/xaboy/form-create/issues"
     },
     "dependencies": {
-        "@jeff-js/component-elm-checkbox": "^2.5.58",
-        "@jeff-js/component-elm-frame": "^2.5.58",
-        "@jeff-js/component-elm-group": "^2.5.58",
-        "@jeff-js/component-elm-radio": "^2.5.58",
-        "@jeff-js/component-elm-select": "^2.5.58",
-        "@jeff-js/component-elm-tree": "^2.5.58",
+        "@jeff-js/component-elm-checkbox": "^2.6.0",
+        "@jeff-js/component-elm-frame": "^2.6.0",
+        "@jeff-js/component-elm-group": "^2.6.0",
+        "@jeff-js/component-elm-radio": "^2.6.0",
+        "@jeff-js/component-elm-select": "^2.6.0",
+        "@jeff-js/component-elm-tree": "^2.6.0",
         "@jeff-js/component-elm-upload": "^2.6.0",
-        "@jeff-js/component-subform": "^2.5.58",
+        "@jeff-js/component-subform": "^2.6.0",
         "@jeff-js/core": "^2.5.61",
         "@jeff-js/utils": "^2.5.39"
     },
