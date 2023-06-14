@@ -420,14 +420,17 @@ export default function mock() {
             {
               "fileName": "C36D9C7A-7332-4ac5-8D01-A50C26F5AB48.png",
               "uuid": "eec2de55-9a24-4788-bf44-25504a758ad1",
-              "downloadUrl": null
+              "downloadUrl": 'https://sit-swork.faw.cn/CS-0101_APP_SWK/api/file/download/45811ff9-64b2-4b29-96c4-d88a6fe02cdf'
             }
           ])
             .props({
-                'action': '/api/file/upload',
+                'action': 'https://sit-swork.faw.cn/CS-0101_APP_SWK/api/file/upload',
                 'limit': 2,
                 'uploadType': 'file',
                 'name': 'file',
+                'headers':{
+                   'Authorization':'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5YW5nd2VuaGFuIiwiY3JlYXRlZCI6MTY4NjcyODYxNzcyOCwiaWRtaWQiOm51bGwsImV4cCI6MTY4NzMzMzQxNywidXBraWQiOiIxNDYzMDUyNzc0OTAxODMzNzI5In0.AKTGSBU6p0lhgYC9qpkMibUqqAeHMpEy0SqmrsftmSwo6y5_98e_RZQaTvBNGhL-z_RFkHNJXxC19kIOgbp6bQ'
+                },
                 'data':{
                     key:'PC_1682650159657',
                     group:'file'
@@ -435,8 +438,7 @@ export default function mock() {
                 'tip':'只能上传jpg/png文件，且不超过5000kb',
                 'onSuccess': function (res, file) {
                     console.log('upload success',res, file);
-                    file.url = '/api/file/download/'+ res.uuid;
-                    // file.name = res.fileName;
+                    file.url = 'https://sit-swork.faw.cn/CS-0101_APP_SWK/api/file/download/'+ res.result.uuid;
                 },
                 'onRemove': function (file, fileList) {
                     console.log(file, fileList);

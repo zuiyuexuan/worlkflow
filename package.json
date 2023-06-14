@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "build": "node tools/cli/run.js build",
-        "dev:ele": "cd packages/element-ui && npm run dev:ele",
+        "dev": "cd packages/element-ui && npm run dev:ele",
         "commit": "git cz",
         "lint": "eslint *.js",
         "clear-all": "rimraf -G package-lock.json node_modules packages/*/node_modules components/*/*/node_modules packages/*/package-lock.json components/*/*/package-lock.json",

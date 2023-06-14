@@ -5,7 +5,7 @@ import './style.css';
 function parseFile(file, i) {
     if(file.name) return file;
     return {
-        url: '/api/file/download/'+ file.uuid,
+        url: file.downloadUrl,
         name: file.fileName,
         uid: i
     };
@@ -65,14 +65,13 @@ export default {
         if (this.formCreateInject.prop.props.showFileList === undefined) {
             this.formCreateInject.prop.props.showFileList = false;
         }
-        // this.formCreateInject.prop.props.fileList = toArray(this.value).map(parseFile);
+        this.formCreateInject.prop.props.fileList = this.value.map(parseFile);
     },
     watch: {
         value(n) {
             if (this.$refs.upload.uploadFiles.every(file => {
                 return !file.status || file.status === 'success';
             })) {
-                console.log('watch：value',n)
                 this.$refs.upload.uploadFiles = n.map(parseFile);
                 this.uploadList = this.$refs.upload.uploadFiles;
             }
@@ -160,7 +159,6 @@ export default {
         
         },
         update() {
-            console.log('update',this.$refs.upload.uploadFiles)
             let files = this.$refs.upload.uploadFiles.filter((url) => url !== undefined);
             if (this.cacheFiles.length !== files.length) {
                 this.cacheFiles = [...files];
@@ -195,7 +193,7 @@ export default {
     },
     mounted() {
         this.uploadList = this.$refs.upload.uploadFiles;
-        this.$watch(() => this.$refs.upload.uploadFiles, () => {
+        this.$watch(() => this.$refs.upload.uploadFiles, (e) => {
             this.update();
         }, {deep: true});
     }
