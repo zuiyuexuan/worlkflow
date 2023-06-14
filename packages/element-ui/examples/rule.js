@@ -437,7 +437,7 @@ export default function mock() {
                 },
                 'tip':'只能上传jpg/png文件，且不超过5000kb',
                 'onSuccess': function (res, file) {
-                    console.log('upload success',res, file);
+                    console.log('upload success 2',res, file);
                     file.url = 'https://sit-swork.faw.cn/CS-0101_APP_SWK/api/file/download/'+ res.result.uuid;
                 },
                 'onRemove': function (file, fileList) {
