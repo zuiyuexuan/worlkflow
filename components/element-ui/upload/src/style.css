@@ -26,7 +26,7 @@
 }
 ._fc-upload-file .fc-upload-btn .el-button{
     background: #EBF3FE;
-    color: #3F8Eff;
+    color: #0d5fe9;
     border: 0;
 }
 ._fc-upload-file .fc-files{
@@ -73,7 +73,7 @@
 }
 
 ._fc-upload-file .fc-files .file-item a{
-   color: #409EFF;
+   color: #0d5fe9;
    text-decoration: underline; 
    cursor: pointer;
 }
