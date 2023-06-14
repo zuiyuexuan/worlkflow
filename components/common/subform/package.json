@@ -1,6 +1,6 @@
 {
   "name": "@jeff-js/component-subform",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "@jeff-js 内置组件",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

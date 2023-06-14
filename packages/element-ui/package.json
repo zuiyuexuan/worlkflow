@@ -1,6 +1,6 @@
 {
     "name": "@jeff-js/element-ui",
-    "version": "2.6.0",
+    "version": "2.6.1",
     "description": "element-ui动态表单|form-create is a form generation component that can generate dynamic rendering, data collection, verification and submission functions through JSON. Supports 3 UI frameworks, and supports the generation of any Vue components. Built-in 20 kinds of commonly used form components and custom components, no matter how complex forms can be easily handled.",
     "main": "./dist/form-create.js",
     "module": "./dist/form-create.js",
@@ -42,14 +42,14 @@
         "url": "https://github.com/xaboy/form-create/issues"
     },
     "dependencies": {
-        "@jeff-js/component-elm-checkbox": "^2.6.0",
-        "@jeff-js/component-elm-frame": "^2.6.0",
-        "@jeff-js/component-elm-group": "^2.6.0",
-        "@jeff-js/component-elm-radio": "^2.6.0",
-        "@jeff-js/component-elm-select": "^2.6.0",
-        "@jeff-js/component-elm-tree": "^2.6.0",
+        "@jeff-js/component-elm-checkbox": "^2.6.1",
+        "@jeff-js/component-elm-frame": "^2.6.1",
+        "@jeff-js/component-elm-group": "^2.6.1",
+        "@jeff-js/component-elm-radio": "^2.6.1",
+        "@jeff-js/component-elm-select": "^2.6.1",
+        "@jeff-js/component-elm-tree": "^2.6.1",
         "@jeff-js/component-elm-upload": "^2.6.0",
-        "@jeff-js/component-subform": "^2.6.0",
+        "@jeff-js/component-subform": "^2.6.1",
         "@jeff-js/core": "^2.5.61",
         "@jeff-js/utils": "^2.5.39"
     },
