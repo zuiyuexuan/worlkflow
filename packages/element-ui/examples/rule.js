@@ -317,7 +317,7 @@ export default function mock() {
                     }, ['新鲜水果']);
                 }
             },
-        ]).props({}),
+        ]).props({  multiple: true}).value(''),
         {
             type: 'div',
             name: 'div2',

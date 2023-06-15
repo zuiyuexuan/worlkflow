@@ -84,6 +84,7 @@
 
 ._fc-upload-file .el-upload {
     display: block;
+    text-align: left;
 }
 
 ._fc-upload-file .fc-upload-btn, ._fc-upload-file .fc-files {
