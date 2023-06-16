@@ -65,7 +65,7 @@ export default {
         if (this.formCreateInject.prop.props.showFileList === undefined) {
             this.formCreateInject.prop.props.showFileList = false;
         }
-        this.formCreateInject.prop.props.fileList = this.value.map(parseFile);
+        this.formCreateInject.prop.props.fileList = this.value ? this.value.map(parseFile): [];
     },
     watch: {
         value(n) {
